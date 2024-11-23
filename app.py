@@ -9,7 +9,7 @@ client = Client(SPACE_NAME)
 
 @app.route('/')
 def index():
-    return render_template('index.html')  # ממשק ה-Frontend
+    return render_template('index.html')  # קובץ HTML לממשק משתמש
 
 @app.route('/upload', methods=['POST'])
 def upload():
@@ -35,4 +35,4 @@ def upload():
     })
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
